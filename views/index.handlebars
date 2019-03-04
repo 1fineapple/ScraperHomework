@@ -1,0 +1,51 @@
+<nav>
+    <div class="nav-container">
+        Newspaper Scraper 
+         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/scrape" id="scrape" class="btn-large waves-effect waves-light green lighten-1">Scrape Articles</a></li>
+            <li><a href="/articles" id="savedArcticles">Saved Articles</a></li>
+            <li><a href="https://github.com/1fineapple" target="blank">Git Hub Reposity</a></li>
+         </ul>
+    </div>
+</nav>
+
+<main>
+   
+  <div class = "col 8">
+    <ul class="collection-center" id= "article">
+        {{#unless this.num}}
+        <li id= "articles" class="collection-item grey lighten-1 black-text">
+            <h4>Scrape articles by pressing the Scrape button.</h4>
+        </li>
+        {{/unless}}
+        {{#if this.num}}
+        <li id= "articles" class="collection-item red lighten-1 white-text">
+            <h4>You have scraped {{this.num}} articles.</h4>
+        </li>
+         {{/if}}
+    </ul>
+
+    
+  </div>
+  
+
+  <div class = "col 4" id = "notes" style= "float: right;" "width: 30%;" "background-color:white">
+    <div class = "articletitle" style = "font-size: 26;" "color:white;">Click and Post</div>
+     <form id="form-add-{{this.id}}" action="/articles/{{this.id}}" method="post">
+        <div class = "row">
+          <input id="titleinput" name="title" type="text" class="validate" style = "background-color:white;">
+        </div>       
+              {{!-- save articles --}}  
+        <div class="row">
+          <div class="input-field col s12">
+              <center><input class="btn add-comment-button" id="savenote" data-id="{{this.id}}" type="submit"
+                value="Submit" ></center>
+          </div>
+        </div>
+      </form>
+  </div>
+
+   
+
+
+</main>

@@ -1,0 +1,60 @@
+
+  nav {
+    background-color: black;
+}
+
+body {background-color: #273d5a;}
+
+#scrape{
+  background-color:darksalmon;
+  font-family: 'Courier New', Courier, monospace
+}
+.wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    background: #273d5a;
+  }
+
+  #articles {
+    display: inline-block;
+    overflow: auto;
+    width: 60%;
+    height: 700px;
+    
+  }
+  #notes {
+    float: right;
+    width: 30%;
+  }
+  textarea, input {
+    display: block;
+    width: 100%;
+    background-color: #FCF5C7;
+  }
+  input {
+    height: 36px;
+    font-size: 24px;
+  }
+  textarea {
+    height: 200px;
+    font-size: 18px;
+  }
+  a:hover {
+    -webkit-transform: scale(1.1);
+}
+
+div.copyright.grey-text {
+    padding-bottom: 20px;
+    margin-left: 40px;
+}
+
+.card.hoverable.index {
+height: 550px;
+
+}
+
+.card.card-title {
+font-size: 18px;
+}
